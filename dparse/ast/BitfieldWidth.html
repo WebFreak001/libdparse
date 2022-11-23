@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
-		<title>Function Parser.peekNIsOneOf</title>
+		<title>Class BitfieldWidth</title>
 		<link rel="stylesheet" href="../../css/style.min.css"/>
 		<script type="text/javascript" src="../../js/script.min.js"></script>
 	</head>
@@ -27,7 +27,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</div>
 				<ul class="tree-view">
 					<li>
-						<div class="module ">
+						<div class="module selected">
 							<a href="../../dparse/ast.html">ast</a>
 						</div>
 					</li>
@@ -52,7 +52,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</div>
 					</li>
 					<li>
-						<div class="module selected">
+						<div class="module ">
 							<a href="../../dparse/parser.html">parser</a>
 						</div>
 					</li>
@@ -104,34 +104,68 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 		</nav>
 		<div id="main-contents">
 			<div>
-				<h1>Function Parser.peekNIsOneOf</h1><p></p>
+				<h1>Class BitfieldWidth</h1><p></p>
 				<div class="prototype">
 					<code class="lang-d">
 						<div class="single-prototype">
-				<span class="kwd">final </span><span class="typ">bool</span> <span class="pln">peekNIsOneOf</span>
-				<span class="pun">(</span>
-				<br/>
-				&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">offset</span><span class="pun">,</span>
-				<br/>
-				&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">ubyte</span><span class="pun">[]</span> <span class="pln">types</span><span class="pun">...</span>
-				<br/>
-				<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @nogc @safe const</span><span class="pun">;</span>
+				<span class="kwd">class</span> <span class="typ">BitfieldWidth</span>
+				<br>&nbsp;&nbsp;: <a href="../../dparse/ast/BaseNode.html"><span class="typ">BaseNode</span></a>
+				<span class="pun">;</span>
 						</div>
 					</code>
 				</div>
 				
-				<section><h2>Returns</h2>
-<p><code class="lang-d"><span class="kwd">true</span></code> if there is a token <code class="lang-d"><a href="../../dparse/parser/Parser.peekNIsOneOf.html#offset"><span class="pln">offset</span></a></code> tokens after the current one
- and its type is one of the given <code class="lang-d"><a href="../../dparse/parser/Parser.peekNIsOneOf.html#types"><span class="pln">types</span></a></code>.
-</p>
-</section>
-
+				<section><h2>Fields</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Type</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../dparse/ast/BitfieldWidth.expression.html" class="public"><code>expression</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><a href="../../dparse/ast/ExpressionNode.html"><span class="typ">ExpressionNode</span></a></code></td><td></td>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../dparse/ast/BaseNode.tokens.html" class="public inherited"><code>tokens</code></a>
+							</td>
+							<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><a href="../../std/experimental/lexer/TokenStructure.html"><span class="typ">TokenStructure</span></a>!(ubyte,"import dparse.lexer:TokenTriviaFields; mixin TokenTriviaFields;")<span class="pun">)</span><span class="pun">[]</span></code></td><td>List of tokens consumed by this AST node
+</td>
+						</tr>
+					</table>
+				</section>
+				<section><h2>Methods</h2>
+					<table>
+						<col class="caption"/>
+						<tr>
+							<th>Name</th><th>Description</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="../../dparse/ast/BitfieldWidth.accept.html" class="public">
+									<code>accept</code>
+								</a>
+								<span class="tableEntryAnnotation">(visitor)</span>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+				</section>
+				
 			</div>
 			<footer>
 				<div id="license-info">
-					
-					
-					
+					<p>Brian Schott
+</p>
+
+					<p>Brian Schott 2013
+</p>
+
+					<p><a href="http://www.boost.org/LICENSE_1_0.txt Boost">License 1.0</a>
+</p>
+
 				</div>
 			</footer>
 		</div>
