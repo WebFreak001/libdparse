@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
-		<title>Function Parser.parseAliasThisDeclaration</title>
+		<title>Function Parser.parseInterpolatedStringPart</title>
 		<link rel="stylesheet" href="../../css/style.min.css"/>
 		<script type="text/javascript" src="../../js/script.min.js"></script>
 	</head>
@@ -103,18 +103,20 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 		</nav>
 		<div id="main-contents">
 			<div>
-				<h1>Function Parser.parseAliasThisDeclaration</h1><p>Parses an AliasThisDeclaration.
+				<h1>Function Parser.parseInterpolatedStringPart</h1><p>Parses an InterpolatedStringPart
 </p>
 				<div class="prototype">
 					<code class="lang-d">
-						<div class="single-prototype"><a href="../../dparse/ast/AliasThisDeclaration.html"><span class="typ">AliasThisDeclaration</span></a> <span class="pln">parseAliasThisDeclaration</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+						<div class="single-prototype"><a href="../../dparse/ast/InterpolatedStringPart.html"><span class="typ">InterpolatedStringPart</span></a> <span class="pln">parseInterpolatedStringPart</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
 						</div>
 					</code>
 				</div>
-				<section><p>aliasThisDeclaration:
- 'alias' Identifier 'this' ';'
- | 'alias' 'this' '=' Identifier ';'
- ;
+				<section><p>interpolatedStringPart:
+       '$' identifier
+     | '$' '(' expression ')'
+     | stringEscapeSequence
+     | NOT:('$' | '"')+
+     ;
 </p>
 </section>
 

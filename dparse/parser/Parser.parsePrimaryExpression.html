@@ -114,9 +114,9 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 				<section><p>primaryExpression:
        identifierOrTemplateInstance
      | '.' identifierOrTemplateInstance
-     | typeConstructor '(' basicType ')' '.' Identifier
-     | basicType '.' Identifier
-     | basicType arguments
+     | typeConstructor '(' type ')' '.' Identifier
+     | builtinType typeSuffix* '.' Identifier
+     | builtinType typeSuffix* arguments
      | typeofExpression
      | typeidExpression
      | vector
@@ -149,6 +149,7 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
      | FloatLiteral
      | StringLiteral+
      | CharacterLiteral
+     | IstringLiteral
      ;
 </p>
 </section>

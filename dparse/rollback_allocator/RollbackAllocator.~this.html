@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
-		<title>Function Parser.parseAliasThisDeclaration</title>
+		<title>Alias RollbackAllocator.~this</title>
 		<link rel="stylesheet" href="../../css/style.min.css"/>
 		<script type="text/javascript" src="../../js/script.min.js"></script>
 	</head>
@@ -52,12 +52,12 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 						</div>
 					</li>
 					<li>
-						<div class="module selected">
+						<div class="module ">
 							<a href="../../dparse/parser.html">parser</a>
 						</div>
 					</li>
 					<li>
-						<div class="module ">
+						<div class="module selected">
 							<a href="../../dparse/rollback_allocator.html">rollback_allocator</a>
 						</div>
 					</li>
@@ -103,21 +103,27 @@ document.getElementById('symbolSearchPane').style.display = 'block';</script>
 		</nav>
 		<div id="main-contents">
 			<div>
-				<h1>Function Parser.parseAliasThisDeclaration</h1><p>Parses an AliasThisDeclaration.
-</p>
+				<h1>Alias RollbackAllocator.~this</h1><p></p>
 				<div class="prototype">
 					<code class="lang-d">
-						<div class="single-prototype"><a href="../../dparse/ast/AliasThisDeclaration.html"><span class="typ">AliasThisDeclaration</span></a> <span class="pln">parseAliasThisDeclaration</span><span class="pun">(</span><span class="pun">)</span><span class="pun">;</span>
+						<div class="single-prototype">
+				<span class="kwd">struct</span> <a href="../../dparse/rollback_allocator/RollbackAllocator.html"><span class="typ">RollbackAllocator</span></a>
+				<br/>
+				<span class="pun">
+					{
+					<br/>
+				</span>
+				&nbsp;&nbsp;<span class="com">// ...</span>
+				<br/>
+				&nbsp;&nbsp;<span class="kwd">alias</span> <span class="pln">~this</span><span class="pun">;</span>
+				<br/>
+				&nbsp;&nbsp;<span class="com">// ...</span>
+				<br/>
+				<span class="pun">}</span>
 						</div>
 					</code>
 				</div>
-				<section><p>aliasThisDeclaration:
- 'alias' Identifier 'this' ';'
- | 'alias' 'this' '=' Identifier ';'
- ;
-</p>
-</section>
-
+				
 			</div>
 			<footer>
 				<div id="license-info">
